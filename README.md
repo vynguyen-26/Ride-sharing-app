@@ -27,7 +27,7 @@ This class served as a base for both riders' and drivers' classes.
   - `name`: Full name of the user
   - `email`: Email address
   - `phone`: Phone number
-  - `current_latitude/longitude`: Real-time location
+  - `current_location (latitude,longitude)`: Real-time location
  
 ### `Driver`
 Extend user functionality with driver-specific attributes
