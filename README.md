@@ -36,8 +36,8 @@ Extend user functionality with driver-specific attributes
   - `availability_status`: ENUM(online, offline, busy)
 
 - **Functions:**
-  - Toggle availability status (online/offline)
-  - Receive and accept/decline ride request
+  - Toggle availability status (online,offline)
+  - Receive and accept or decline ride request
   - Navigate pickup and destination locations
   - Confirm rider pickup and trip complement
 
@@ -46,10 +46,10 @@ Extend user functionality with driver-specific attributes
 Extend user functionality with rider-specific attributes
 
 - **Attributes:**
-  - `current_ride_status`: Real-time update of the ride (looking/found driver, est arrival, rider/driver location update)
+  - `current_ride_status`: Real-time update of the ride (looking and found driver, est arrival, rider and driver location update)
 
 - **Functions:**
-  - Request a ride with pickup/dropoff locations
+  - Request a ride with pickup and dropoff locations
   - Track driver location in real time
   - Cancel ride request before driver pickup 
  
