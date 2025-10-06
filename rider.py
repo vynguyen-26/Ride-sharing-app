@@ -4,9 +4,10 @@ from user import User
 
 class Rider(User):
     def __init__(self, name, email, phone, user_id, current_location, rider_id, rider_status=RiderStatus.LOOKING):
-        super().__init__(name, email, phone, user_id, current_location)
+        super().__init__(name, email, phone, user_id)
         self.rider_id = rider_id
         self.rider_status = rider_status
+        self.current_location = current_location
         self.pickup_location = None
         self.dropoff_location = None
         self.current_ride_status = None 
@@ -28,9 +29,3 @@ class Rider(User):
     def update_status(self, status):
         if isinstance(status, RiderStatus):
             self.rider_status = status
-
-    def track_driver_location(self):
-        if self.current_driver:
-            print(f"Driver location: {self.current_driver.current_location}")
-        else:
-            print("No driver assigned.")
