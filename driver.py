@@ -4,9 +4,10 @@ from user import User
 
 class Driver(User):
     def __init__(self, name, email, phone, user_id, current_location, driver_id, driver_status=DriverStatus.OFFLINE):
-        super().__init__(name, email, phone, user_id, current_location)
+        super().__init__(name, email, phone, user_id)
         self.driver_id = driver_id
         self.driver_status = driver_status
+        self.current_location = current_location
         self.current_ride_status = None  # Track the current ride request
 
     def set_availability(self, status):
@@ -26,9 +27,6 @@ class Driver(User):
 
     def start_ride(self):
         self.current_ride_status = RideStatus.STARTED
-
-    def navigate_to_location(self,location):
-        print(f"Navigating to {location}.")
 
     def confirm_pickup(self):
         self.current_ride_status = RideStatus.PICK_UP
