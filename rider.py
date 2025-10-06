@@ -1,4 +1,5 @@
-from enums import RiderStatus, RideStatus
+from rider_status import RiderStatus 
+from ride_status import RideStatus
 from user import User
 
 class Rider(User):
