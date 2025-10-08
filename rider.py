@@ -3,8 +3,8 @@ from ride_status import RideStatus
 from user import User
 
 class Rider(User):
-    def __init__(self, name, email, phone, user_id, current_location, rider_id, rider_status=RiderStatus.LOOKING):
-        super().__init__(name, email, phone, user_id)
+    def get_info(self, name, email, phone, user_id, current_location, rider_id, rider_status):
+        super().get_info(name, email, phone, user_id)
         self.rider_id = rider_id
         self.rider_status = rider_status
         self.current_location = current_location
@@ -12,6 +12,9 @@ class Rider(User):
         self.dropoff_location = None
         self.current_ride_status = None 
         self.current_driver = None  #Track assigned driver
+
+    def update_location(self, new_location):
+        self.current_location = new_location
     
     def request_ride(self, pickup_location, dropoff_location):
         self.pickup_location = pickup_location
